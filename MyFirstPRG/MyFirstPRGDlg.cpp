@@ -65,6 +65,11 @@ BEGIN_MESSAGE_MAP(CMyFirstPRGDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_A_BUTTON, &CMyFirstPRGDlg::OnBnClickedAButton)
+	ON_BN_CLICKED(IDC_B_BUTTON, &CMyFirstPRGDlg::OnBnClickedBButton)
+	ON_BN_CLICKED(IDC_C_BUTTON, &CMyFirstPRGDlg::OnBnClickedCButton)
+	ON_BN_CLICKED(IDOK, &CMyFirstPRGDlg::OnBnClickedOk)
+	ON_BN_CLICKED(IDCANCEL, &CMyFirstPRGDlg::OnBnClickedCancel)
 END_MESSAGE_MAP()
 
 
@@ -153,3 +158,30 @@ HCURSOR CMyFirstPRGDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+void CMyFirstPRGDlg::OnBnClickedAButton()
+{
+	AfxMessageBox(_T("A Button Clicked!"));
+}
+
+void CMyFirstPRGDlg::OnBnClickedBButton()
+{
+	// TODO: Add your control notification handler code here
+}
+
+void CMyFirstPRGDlg::OnBnClickedCButton()
+{
+	// TODO: Add your control notification handler code here
+}
+
+void CMyFirstPRGDlg::OnBnClickedOk()
+{
+	// TODO: Add your control notification handler code here
+	CDialogEx::OnOK();
+}
+
+void CMyFirstPRGDlg::OnBnClickedCancel()
+{
+	// TODO: Add your control notification handler code here
+	CDialogEx::OnCancel();
+}
