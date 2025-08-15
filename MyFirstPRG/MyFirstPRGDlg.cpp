@@ -168,17 +168,17 @@ HCURSOR CMyFirstPRGDlg::OnQueryDragIcon()
 
 void CMyFirstPRGDlg::OnBnClickedAButton()
 {
-	a = a + 2;
+	a = a + 3;
 }
 
 void CMyFirstPRGDlg::OnBnClickedBButton()
 {
-	b = b + 2;
+	b = b + 3;
 }
 
 void CMyFirstPRGDlg::OnBnClickedCButton()
 {
-	c = c + 2;
+	c = c + 3;
 }
 
 void CMyFirstPRGDlg::OnBnClickedOk()
