@@ -45,5 +45,5 @@ public:
 	int m_nA;
 	int m_nB;
 	int m_nResult;
-	afx_msg void OnBnClickedButton1();
+	afx_msg void OnBnClickedCalculateButton();
 };
