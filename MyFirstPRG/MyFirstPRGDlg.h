@@ -42,4 +42,8 @@ public:
 	int b = 0;
 	int c = 0;
 	int d = 0;
+	int m_nA;
+	int m_nB;
+	int m_nResult;
+	afx_msg void OnBnClickedButton1();
 };

@@ -59,6 +59,9 @@ CMyFirstPRGDlg::CMyFirstPRGDlg(CWnd* pParent /*=nullptr*/)
 void CMyFirstPRGDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Text(pDX, IDC_CDIT, m_nA);
+	DDX_Text(pDX, IDC_BEDIT, m_nB);
+	DDX_Text(pDX, IDC_AEDIT, m_nResult);
 }
 
 BEGIN_MESSAGE_MAP(CMyFirstPRGDlg, CDialogEx)
@@ -70,6 +73,7 @@ BEGIN_MESSAGE_MAP(CMyFirstPRGDlg, CDialogEx)
 	ON_BN_CLICKED(IDC_C_BUTTON, &CMyFirstPRGDlg::OnBnClickedCButton)
 	ON_BN_CLICKED(IDOK, &CMyFirstPRGDlg::OnBnClickedOk)
 	ON_BN_CLICKED(IDCANCEL, &CMyFirstPRGDlg::OnBnClickedCancel)
+	ON_BN_CLICKED(IDC_BUTTON1, &CMyFirstPRGDlg::OnBnClickedButton1)
 END_MESSAGE_MAP()
 
 
@@ -187,4 +191,11 @@ void CMyFirstPRGDlg::OnBnClickedCancel()
 {
 	// TODO: Add your control notification handler code here
 	CDialogEx::OnCancel();
+}
+
+void CMyFirstPRGDlg::OnBnClickedButton1()
+{
+	UpdateData(TRUE);
+	m_nResult = m_nA + m_nB;
+	UpdateData(FALSE);
 }
