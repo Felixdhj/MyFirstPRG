@@ -52,6 +52,9 @@ END_MESSAGE_MAP()
 
 CMyFirstPRGDlg::CMyFirstPRGDlg(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_MYFIRSTPRG_DIALOG, pParent)
+	, m_nA(0)
+	, m_nB(0)
+	, m_nResult(0)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
@@ -59,6 +62,9 @@ CMyFirstPRGDlg::CMyFirstPRGDlg(CWnd* pParent /*=nullptr*/)
 void CMyFirstPRGDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Text(pDX, IDC_A_EDIT, m_nA);
+	DDX_Text(pDX, IDC_B_EDIT, m_nB);
+	DDX_Text(pDX, IDC_RESULT_EDIT, m_nResult);
 }
 
 BEGIN_MESSAGE_MAP(CMyFirstPRGDlg, CDialogEx)
@@ -70,6 +76,7 @@ BEGIN_MESSAGE_MAP(CMyFirstPRGDlg, CDialogEx)
 	ON_BN_CLICKED(IDC_C_BUTTON, &CMyFirstPRGDlg::OnBnClickedCButton)
 	ON_BN_CLICKED(IDOK, &CMyFirstPRGDlg::OnBnClickedOk)
 	ON_BN_CLICKED(IDCANCEL, &CMyFirstPRGDlg::OnBnClickedCancel)
+	ON_BN_CLICKED(IDC_CALCULATE_BUTTON, &CMyFirstPRGDlg::OnBnClickedCalculateButton)
 END_MESSAGE_MAP()
 
 
@@ -187,4 +194,11 @@ void CMyFirstPRGDlg::OnBnClickedCancel()
 {
 	// TODO: Add your control notification handler code here
 	CDialogEx::OnCancel();
+}
+
+void CMyFirstPRGDlg::OnBnClickedCalculateButton()
+{
+	UpdateData(TRUE);
+	m_nResult = m_nA + m_nB;
+	UpdateData(FALSE);
 }
