@@ -161,23 +161,26 @@ HCURSOR CMyFirstPRGDlg::OnQueryDragIcon()
 
 void CMyFirstPRGDlg::OnBnClickedAButton()
 {
-	AfxMessageBox(_T("A Button Clicked!"));
+	a++;
 }
 
 void CMyFirstPRGDlg::OnBnClickedBButton()
 {
-	// TODO: Add your control notification handler code here
+	b = b + 2;
 }
 
 void CMyFirstPRGDlg::OnBnClickedCButton()
 {
-	// TODO: Add your control notification handler code here
+	c = c + 3;
 }
 
 void CMyFirstPRGDlg::OnBnClickedOk()
 {
-	// TODO: Add your control notification handler code here
-	CDialogEx::OnOK();
+	d = a + b + c;
+	CString str;
+	str.Format(_T("%d"), d);
+	AfxMessageBox(str);
+	//CDialogEx::OnOK();
 }
 
 void CMyFirstPRGDlg::OnBnClickedCancel()

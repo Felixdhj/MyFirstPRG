@@ -37,4 +37,9 @@ public:
 	afx_msg void OnBnClickedCButton();
 	afx_msg void OnBnClickedOk();
 	afx_msg void OnBnClickedCancel();
+
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	int d = 0;
 };
