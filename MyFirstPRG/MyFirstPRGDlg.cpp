@@ -199,6 +199,6 @@ void CMyFirstPRGDlg::OnBnClickedCancel()
 void CMyFirstPRGDlg::OnBnClickedCalculateButton()
 {
 	UpdateData(TRUE);
-	m_nResult = m_nA + m_nB;
+	m_nResult = m_nA * m_nB;
 	UpdateData(FALSE);
 }
